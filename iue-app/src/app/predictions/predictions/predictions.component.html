@@ -1,0 +1,55 @@
+<div class="header-container">
+    <app-back class="back-button"></app-back>
+    <h1> Prediccion </h1>    
+</div>
+
+<div class="description-predict">
+    <h3> Ingrese un valor en cada campo para realizar un predicción </h3>
+</div>
+
+<div class="container">
+
+
+    <div class=" input-container ">
+
+        <div class="input-column">
+            <label for="wheelbase"> Wheel Base</label>
+            <input type="text" [(ngModel)]="wheelbase" id="wheelbase">
+        </div>
+        <div class="input-column">
+            <label for="carlength"> Car Length</label>
+            <input type="text" [(ngModel)]="carlength" id="carlength">
+        </div>
+        <div class="input-column">
+            <label for="carwidth"> Car Width </label>
+            <input type="text" [(ngModel)]="carwidth" id="carwidth">
+        </div>
+        <div class="input-column">
+            <label for="curbweight"> Curb Weigth </label>
+            <input type="text" [(ngModel)]="curbweight" id="curbweight">
+        </div>
+        <div class="input-column">
+            <label for="enginesize"> Engine Size </label>
+            <input type="text" [(ngModel)]="enginesize" id="enginesize">
+        </div>
+        <div class="input-column">
+            <label for="boreratio"> Bore Ratio </label>
+            <input type="text" [(ngModel)]="boreratio" id="boreratio">
+        </div>
+        <div class="input-column">
+            <label for="boreratio"> Horse Power </label>
+            <input type="text" [(ngModel)]="horsepower" id="horsepower">
+        </div>
+        <div class="input-column">
+            <label for="boreratio"> City MPG </label>
+            <input type="text" [(ngModel)]="citympg" id="citympg">
+        </div>
+        <div class="input-column">
+            <label for="boreratio"> Higway MPG </label>
+            <input type="text" [(ngModel)]="highwaympg" id="highwaympg">
+        </div>
+
+    </div>
+
+    <button (click)="predictValue(wheelbase)" class="predict-button"> Predecir </button>
+</div>

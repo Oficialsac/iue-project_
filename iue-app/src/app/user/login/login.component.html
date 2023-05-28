@@ -1,0 +1,40 @@
+<div class="globalContainer">
+    <div class="header">
+        <h1> Ingreso Usuarios </h1>
+    </div>
+
+    <form class="container" (ngSubmit)="loginSesion()" [formGroup]="groupForm">
+
+        <label for="username"> Username </label>
+        
+        <input 
+            type="text" 
+            id="username"
+            name="username"
+            required="required"
+            formControlName="username"
+            placeholder="Username">
+    
+        <label for="username" class="error-label" *ngIf="Username.invalid && (Username.dirty || Username.touched )">
+                Debe contener minimo 6 caracteres    
+        </label>
+        
+        <label for="password"> Password</label>
+    
+        <input 
+            type="password"
+            id="password"
+            name="password"
+            required="required"
+            formControlName="password"
+            placeholder="Password">
+        <label for="username" class="error-label" *ngIf="Password.invalid && (Password.dirty || Password.touched )">
+                Debe ingresar la contraseña
+        </label>
+        <button class="login-btn" id="login-btn" type="submit"> Login</button>
+        <label for="login-btn"> No estas registrado? <a class="sign-up" routerLink="/signup">Registrate ahora</a></label>
+    
+    
+    </form>
+</div>
+
